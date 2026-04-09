@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="BrainUp Kids — Make learning multiplication tables super fun! Video lessons, practice, songs & games for ages 4-10. ₹499 for 6 months access.">
+    <meta name="keywords"
+        content="BrainUp Kids, multiplication tables, kids learning, math for kids, table songs, educational games, maths practice">
+    <meta name="author" content="BrainUp Kids">
+    <title>BrainUp Kids — Turn Screen Time Into Smart Time!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Floating Particles Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="images/brain-mascot.png" alt="BrainUp Kids Mascot" class="logo-img">
+                <span class="logo-text">Brain<span class="logo-highlight">Up</span> Kids</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#learning-system">How It Works</a></li>
+                <li><a href="#video-section">Watch Demo</a></li>
+                <li><a href="#levels">Levels</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#pricing" class="nav-cta">Start Now 🚀</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero / Banner Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">🎉 New Course Launched!</div>
+                <h1 class="hero-title">
+                    Turn Screen Time Into
+                    <span class="gradient-text">Smart Time!</span>
+                </h1>
+                <p class="hero-subtitle">Make Learning Multiplication Tables <strong>Super Fun!</strong></p>
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <span class="feature-icon">🎮</span>
+                        <span>Learn with Games & Activities</span>
+                    </div>
+                    <div class="hero-feature">
+                        <span class="feature-icon">📱</span>
+                        <span>Smart Learning on Mobile/Tablets</span>
+                    </div>
+                    <div class="hero-feature">
+                        <span class="feature-icon">👶</span>
+                        <span>Perfect for Kids Ages 4-10</span>
+                    </div>
+                </div>
+                <div class="hero-cta-group">
+                    <a href="#pricing" class="btn btn-primary btn-glow">
+                        <span>Tap & Start Now!</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                    <a href="#video-section" class="btn btn-secondary">
+                        <span class="play-icon">▶</span>
+                        <span>Watch Demo</span>
+                    </a>
+                </div>
+                <div class="hero-trust">
+                    <div class="trust-stars">⭐⭐⭐⭐⭐</div>
+                    <span>Trusted by <strong>10,000+</strong> Parents</span>
+                </div>
+            </div>
+            <div class="hero-banner" id="heroBanner">
+                <div class="banner-wrapper">
+                    <img src="images/brain-mascot.png" alt="BrainUp Kids - Turn Screen Time Into Smart Time"
+                        class="banner-image" id="bannerImage">
+                    <div class="banner-price-tag">
+                        <span class="price-amount">₹499</span>
+                        <span class="price-period">6 Months</span>
+                    </div>
+                </div>
+                <div class="floating-elements">
+                    <div class="float-item float-1">6×3=18</div>
+                    <div class="float-item float-2">7×4=28</div>
+                    <div class="float-item float-3">⭐</div>
+                    <div class="float-item float-4">🎯</div>
+                    <div class="float-item float-5">🚀</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 60C240 120 480 0 720 60C960 120 1200 0 1440 60V120H0V60Z" fill="var(--bg-primary)" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-count="10000">
+                    <span class="stat-number">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">Happy Students</span>
+                </div>
+                <div class="stat-item" data-count="500">
+                    <span class="stat-number">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">Video Lessons</span>
+                </div>
+                <div class="stat-item" data-count="50">
+                    <span class="stat-number">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">Fun Games</span>
+                </div>
+                <div class="stat-item" data-count="98">
+                    <span class="stat-number">0</span>
+                    <span class="stat-suffix">%</span>
+                    <span class="stat-label">Success Rate</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning System Section -->
+    <section class="learning-system" id="learning-system">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">🧠 How It Works</span>
+                <h2 class="section-title">Our Step-by-Step <span class="gradient-text">Learning System</span></h2>
+                <p class="section-desc">A proven 4-step method that makes your child a table master — with fun, not
+                    pressure!</p>
+            </div>
+
+            <!-- Step 1 -->
+            <div class="step-card step-card-right" data-step="1">
+                <div class="step-visual">
+                    <div class="step-image-wrapper">
+                        <img src="images/video-learning.png" alt="Video Learning Phase" class="step-image">
+                        <div class="step-badge">Step 1</div>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <div class="step-icon-wrapper" style="--step-color: #FF6B6B;">
+                        <span class="step-emoji">🎥</span>
+                    </div>
+                    <h3 class="step-title">Video Learning Phase</h3>
+                    <p class="step-desc">We begin with concept-based video lessons where tables are taught in an easy
+                        and engaging way.</p>
+                    <ul class="step-features">
+                        <li><span class="check">✔️</span> Simple and clear explanations</li>
+                        <li><span class="check">✔️</span> Repetition techniques for better memory</li>
+                        <li><span class="check">✔️</span> Fun animations to keep kids engaged</li>
+                    </ul>
+                    <div class="step-highlight">
+                        <span>👉</span> This ensures your child <strong>understands</strong> tables instead of just
+                        memorizing them.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card step-card-left" data-step="2">
+                <div class="step-content">
+                    <div class="step-icon-wrapper" style="--step-color: #4ECDC4;">
+                        <span class="step-emoji">🔁</span>
+                    </div>
+                    <h3 class="step-title">Complete Practice Phase</h3>
+                    <p class="step-desc">Learning becomes strong only with practice — and we make it effective and fun.
+                    </p>
+                    <ul class="step-features">
+                        <li><span class="check">✔️</span> Listening and speaking practice</li>
+                        <li><span class="check">✔️</span> Repetition through guided videos</li>
+                        <li><span class="check">✔️</span> Speed-building exercises</li>
+                    </ul>
+                    <div class="step-highlight">
+                        <span>👉</span> This phase builds strong recall and improves <strong>calculation speed.</strong>
+                    </div>
+                </div>
+                <div class="step-visual">
+                    <div class="step-image-wrapper">
+                        <img src="images/practice-phase.png" alt="Complete Practice Phase" class="step-image">
+                        <div class="step-badge">Step 2</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card step-card-right" data-step="3">
+                <div class="step-visual">
+                    <div class="step-image-wrapper">
+                        <img src="images/table-songs.png" alt="Table Songs" class="step-image">
+                        <div class="step-badge">Step 3</div>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <div class="step-icon-wrapper" style="--step-color: #FFE66D;">
+                        <span class="step-emoji">🎶</span>
+                    </div>
+                    <h3 class="step-title">Table Songs</h3>
+                    <p class="step-desc">Children learn faster with music!</p>
+                    <ul class="step-features">
+                        <li><span class="check">✔️</span> Catchy table songs</li>
+                        <li><span class="check">✔️</span> Easy rhythm-based memorization</li>
+                        <li><span class="check">✔️</span> Fun learning experience</li>
+                    </ul>
+                    <div class="step-highlight">
+                        <span>👉</span> Perfect for <strong>quick and long-term</strong> memory retention.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card step-card-left" data-step="4">
+                <div class="step-content">
+                    <div class="step-icon-wrapper" style="--step-color: #A78BFA;">
+                        <span class="step-emoji">🎮</span>
+                    </div>
+                    <h3 class="step-title">Interactive Games</h3>
+                    <p class="step-desc">We make learning exciting with gamified practice.</p>
+                    <ul class="step-features">
+                        <li><span class="check">✔️</span> Improves quick thinking</li>
+                        <li><span class="check">✔️</span> Enhances problem-solving skills</li>
+                        <li><span class="check">✔️</span> Reduces fear of maths</li>
+                    </ul>
+                    <div class="step-highlight">
+                        <span>👉</span> Kids learn without pressure while <strong>enjoying the process.</strong>
+                    </div>
+                </div>
+                <div class="step-visual">
+                    <div class="step-image-wrapper">
+                        <img src="images/interactive-games.png" alt="Interactive Games" class="step-image">
+                        <div class="step-badge">Step 4</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section" id="video-section">
+        <div class="video-bg-pattern"></div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">🎬 Watch & Learn</span>
+                <h2 class="section-title">See Our <span class="gradient-text">Course in Action</span></h2>
+                <p class="section-desc">Watch how BrainUp Kids transforms table learning into an exciting adventure!</p>
+            </div>
+            <div class="video-wrapper">
+                <div class="video-player" id="videoPlayer">
+                    <div class="video-placeholder" id="videoPlaceholder">
+                        <div class="video-thumbnail">
+                            <img src="images/brain-mascot.png" alt="Course Demo Video" class="video-thumb-img">
+                            <div class="video-overlay">
+                                <button class="play-button" id="playButton" aria-label="Play video">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h3>🎓 Course Introduction — How Your Child Will Learn</h3>
+                            <p>See our complete 4-step learning system and how it transforms your child's math skills
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Replace the src below with your actual YouTube embed URL -->
+                    <iframe id="courseVideo" class="video-iframe hidden" width="100%" height="100%" src=""
+                        title="BrainUp Kids Course Introduction" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-features">
+                    <div class="video-feature-item">
+                        <span class="vf-icon">📹</span>
+                        <div>
+                            <h4>HD Quality</h4>
+                            <p>Crystal clear videos</p>
+                        </div>
+                    </div>
+                    <div class="video-feature-item">
+                        <span class="vf-icon">🗣️</span>
+                        <div>
+                            <h4>Hindi & English</h4>
+                            <p>Bilingual content</p>
+                        </div>
+                    </div>
+                    <div class="video-feature-item">
+                        <span class="vf-icon">⏱️</span>
+                        <div>
+                            <h4>5-10 Minutes</h4>
+                            <p>Short & focused</p>
+                        </div>
+                    </div>
+                    <div class="video-feature-item">
+                        <span class="vf-icon">♾️</span>
+                        <div>
+                            <h4>Unlimited Replay</h4>
+                            <p>Watch anytime</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Level-Based Testing System -->
+    <section class="levels-section" id="levels">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">📝 Testing System</span>
+                <h2 class="section-title">Level-Based <span class="gradient-text">Progress Tracking</span></h2>
+                <p class="section-desc">Track your child's improvement with our structured 3-level testing system</p>
+            </div>
+            <div class="levels-grid">
+                <!-- Beginner Level -->
+                <div class="level-card level-beginner" data-level="beginner">
+                    <div class="level-glow"></div>
+                    <div class="level-header">
+                        <div class="level-icon-circle">
+                            <span>🟢</span>
+                        </div>
+                        <h3 class="level-name">Beginner Level</h3>
+                        <div class="level-stars">⭐</div>
+                    </div>
+                    <div class="level-body">
+                        <ul class="level-features">
+                            <li>Focus on basic understanding</li>
+                            <li>Simple table-based questions</li>
+                            <li>Build confidence step by step</li>
+                            <li>Encouraging feedback system</li>
+                        </ul>
+                        <div class="level-test-info">
+                            <span class="test-badge">MCQ Test</span>
+                            <span class="test-questions">20 Questions</span>
+                        </div>
+                    </div>
+                    <div class="level-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="--progress: 33%"></div>
+                        </div>
+                        <span class="progress-label">Level 1 of 3</span>
+                    </div>
+                </div>
+
+                <!-- Intermediate Level -->
+                <div class="level-card level-intermediate featured" data-level="intermediate">
+                    <div class="level-glow"></div>
+                    <div class="level-ribbon">Most Popular</div>
+                    <div class="level-header">
+                        <div class="level-icon-circle">
+                            <span>🟡</span>
+                        </div>
+                        <h3 class="level-name">Intermediate Level</h3>
+                        <div class="level-stars">⭐⭐</div>
+                    </div>
+                    <div class="level-body">
+                        <ul class="level-features">
+                            <li>Mixed tables practice</li>
+                            <li>Speed improvement drills</li>
+                            <li>Timed challenge mode</li>
+                            <li>Performance analytics</li>
+                        </ul>
+                        <div class="level-test-info">
+                            <span class="test-badge">MCQ Test</span>
+                            <span class="test-questions">20 Questions</span>
+                        </div>
+                    </div>
+                    <div class="level-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="--progress: 66%"></div>
+                        </div>
+                        <span class="progress-label">Level 2 of 3</span>
+                    </div>
+                </div>
+
+                <!-- Advanced Level -->
+                <div class="level-card level-advanced" data-level="advanced">
+                    <div class="level-glow"></div>
+                    <div class="level-header">
+                        <div class="level-icon-circle">
+                            <span>🔴</span>
+                        </div>
+                        <h3 class="level-name">Advanced Level</h3>
+                        <div class="level-stars">⭐⭐⭐</div>
+                    </div>
+                    <div class="level-body">
+                        <ul class="level-features">
+                            <li>Application-based questions</li>
+                            <li>Real problem-solving practice</li>
+                            <li>Critical thinking challenges</li>
+                            <li>Complete mastery assessment</li>
+                        </ul>
+                        <div class="level-test-info">
+                            <span class="test-badge">MCQ Test</span>
+                            <span class="test-questions">20 Questions</span>
+                        </div>
+                    </div>
+                    <div class="level-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="--progress: 100%"></div>
+                        </div>
+                        <span class="progress-label">Level 3 of 3</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testing Features -->
+            <div class="testing-features">
+                <div class="tf-item">
+                    <span class="tf-check">✔️</span>
+                    <span>Each level includes MCQ tests</span>
+                </div>
+                <div class="tf-item">
+                    <span class="tf-check">✔️</span>
+                    <span>20 questions per test</span>
+                </div>
+                <div class="tf-item">
+                    <span class="tf-check">✔️</span>
+                    <span>Step-by-step improvement tracking</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Comprehensive Test -->
+    <section class="final-test-section">
+        <div class="container">
+            <div class="final-test-card">
+                <div class="final-test-visual">
+                    <div class="trophy-container">
+                        <div class="trophy-glow"></div>
+                        <span class="trophy-emoji">🏆</span>
+                        <div class="confetti-container" id="confettiContainer"></div>
+                    </div>
+                </div>
+                <div class="final-test-content">
+                    <span class="section-tag">🎯 Final Challenge</span>
+                    <h2 class="section-title" style="text-align: left;">Final Comprehensive Test</h2>
+                    <p class="final-test-desc">After completing all levels, your child takes a final test to prove
+                        complete mastery!</p>
+                    <ul class="final-test-features">
+                        <li><span class="check">✔️</span> Covers all tables (2 to 20)</li>
+                        <li><span class="check">✔️</span> Includes mixed & application-based questions</li>
+                        <li><span class="check">✔️</span> Evaluates complete mastery</li>
+                        <li><span class="check">✔️</span> Certificate of achievement</li>
+                    </ul>
+                    <div class="final-test-highlight">
+                        👉 Ensures your child is fully <strong>confident and skilled!</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">💬 Parent Stories</span>
+                <h2 class="section-title">What Parents <span class="gradient-text">Are Saying</span></h2>
+            </div>
+            <div class="testimonials-slider" id="testimonialsSlider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"My daughter was scared of maths, but BrainUp Kids changed everything!
+                        She now knows all tables up to 20 and actually enjoys practicing."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩</div>
+                        <div>
+                            <strong>Priya Sharma</strong>
+                            <span>Mother of Ananya, Age 7</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"The table songs are amazing! My son keeps singing them throughout the
+                        day. Learning has never been this fun for him."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👨</div>
+                        <div>
+                            <strong>Rajesh Kumar</strong>
+                            <span>Father of Arjun, Age 6</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"The game-based learning approach is brilliant. My kids fight over who
+                        gets to play the math games first! Best investment for their education."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩</div>
+                        <div>
+                            <strong>Meena Patel</strong>
+                            <span>Mother of Riya & Rohan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots" id="testimonialDots">
+                <button class="dot active" data-index="0" aria-label="Testimonial 1"></button>
+                <button class="dot" data-index="1" aria-label="Testimonial 2"></button>
+                <button class="dot" data-index="2" aria-label="Testimonial 3"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">💰 Special Offer</span>
+                <h2 class="section-title">Start Your Child's <span class="gradient-text">Success Journey</span></h2>
+                <p class="section-desc">Invest in your child's future — for less than ₹3/day!</p>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-badge">🔥 Limited Time Offer</div>
+                <div class="pricing-amount">
+                    <span class="price-strike">₹999</span>
+                    <div class="price-main">
+                        <span class="price-currency">₹</span>
+                        <span class="price-value">499</span>
+                        <span class="price-duration">/ 6 months</span>
+                    </div>
+                    <span class="price-save">You save ₹500!</span>
+                </div>
+                <ul class="pricing-features">
+                    <li>✅ 500+ Video Lessons</li>
+                    <li>✅ Complete Practice System</li>
+                    <li>✅ All Table Songs</li>
+                    <li>✅ 50+ Interactive Games</li>
+                    <li>✅ Level-Based Testing</li>
+                    <li>✅ Final Comprehensive Test</li>
+                    <li>✅ Achievement Certificates</li>
+                    <li>✅ Progress Tracking Dashboard</li>
+                    <li>✅ Hindi & English Support</li>
+                    <li>✅ Mobile, Tablet & PC Access</li>
+                </ul>
+                <a href="https://pages.razorpay.com/pl_SayQUTxuv2wxFN/view" class="btn btn-primary btn-glow btn-large">
+                    <span>🚀 Tap & Start Now!</span>
+                </a>
+                <p class="pricing-guarantee">
+                    🛡️ 100% Satisfaction Guarantee • No questions asked refund within 7 days
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Play + Learn CTA -->
+    <section class="play-learn-section">
+        <div class="container">
+            <div class="play-learn-card">
+                <div class="pl-emoji">🎮</div>
+                <h2>Play + Learn = <span class="gradient-text">HAPPY KIDS!</span></h2>
+                <p>Just a few minutes a day can transform your child's math skills forever</p>
+                <div class="pl-features">
+                    <span class="pl-tag">⚡ Boost Speed</span>
+                    <span class="pl-tag">🧠 Improve Memory</span>
+                    <span class="pl-tag">💪 Build Confidence</span>
+                </div>
+                <a href="#pricing" class="btn btn-primary btn-glow">Start the Fun Learning Journey! →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">❓ FAQ</span>
+                <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What age group is this course for?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>BrainUp Kids is designed for children aged 4 to 10 years. The content is structured to adapt
+                            to different learning speeds, making it perfect for both beginners and advanced learners.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How long does it take to see results?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Most parents notice significant improvement within 2-3 weeks of regular practice. Just 10-15
+                            minutes of daily practice can lead to remarkable results in your child's math skills.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Can my child access it on mobile?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! BrainUp Kids works on all devices — mobile phones, tablets, laptops, and desktop
+                            computers. Learn anytime, anywhere!</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Is there a refund policy?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! We offer a 7-day no-questions-asked refund guarantee. If you're not satisfied
+                            with the course, we'll refund your full amount.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Which tables are covered?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our course covers multiplication tables from 2 to 20, with video lessons, practice sessions,
+                            songs, and games for each table. The final comprehensive test evaluates mastery of all
+                            tables.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 60C240 0 480 120 720 60C960 0f 1200 120 1440 60V0H0V60Z" fill="var(--bg-primary)" />
+            </svg>
+        </div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="images/brain-mascot.png" alt="BrainUp Kids" class="footer-logo-img">
+                        <span class="logo-text">Brain<span class="logo-highlight">Up</span> Kids</span>
+                    </div>
+                    <p>Making multiplication tables fun and engaging for young learners across India.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📸</a>
+                        <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+                        <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
+                    </div>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#learning-system">How It Works</a></li>
+                        <li><a href="#video-section">Watch Demo</a></li>
+                        <li><a href="#levels">Levels</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <div class="contact-items">
+                        <a href="https://www.brainupkids.in" class="contact-item">🌐 www.brainupkids.in</a>
+                        <a href="mailto:contact@brainupkids.in" class="contact-item">📧 contact@brainupkids.in</a>
+                        <a href="tel:+919876543210" class="contact-item">📞 +91 98765 43210</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 BrainUp Kids. All rights reserved. Made with ❤️ for young learners.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/8600632503?text=Hi! I'm interested in BrainUp Kids course" class="whatsapp-float"
+        aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
+        <span class="wa-icon">💬</span>
+        <span class="wa-text">Chat with us!</span>
+    </a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

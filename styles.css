@@ -1068,6 +1068,7 @@ ul {
     overflow: hidden;
     opacity: 0;
     transform: translateY(30px);
+    box-shadow: 0 8px 32px rgba(108, 99, 255, 0.15), 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .level-card.visible {
@@ -1077,7 +1078,7 @@ ul {
 
 .level-card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow-xl);
+    box-shadow: 0 20px 60px rgba(108, 99, 255, 0.25), 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .level-glow {
@@ -1265,11 +1266,11 @@ ul {
     grid-template-columns: 1fr 1.5fr;
     gap: 60px;
     align-items: center;
-    background: white;
+    background: linear-gradient(135deg, #fef0f5 0%, #fce4ec 50%, #fef0f5 100%);
     border-radius: var(--radius-xl);
     padding: 60px;
-    box-shadow: var(--shadow-lg);
-    border: 1px solid rgba(108, 99, 255, 0.08);
+    box-shadow: 0 12px 40px rgba(233, 30, 99, 0.15), 0 6px 20px rgba(244, 143, 177, 0.15), 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(233, 30, 99, 0.1);
 }
 
 .trophy-container {

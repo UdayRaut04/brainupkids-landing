@@ -308,5 +308,153 @@ document.addEventListener('DOMContentLoaded', () => {
         heroSubtitle.style.opacity = '1';
     }
 
+    // === Enrollment Form ===
+    const enrollmentForm = document.getElementById('enrollmentForm');
+    const enrollSubmitBtn = document.getElementById('enrollSubmitBtn');
+    const RAZORPAY_URL = 'https://pages.razorpay.com/pl_SayQUTxuv2wxFN/view';
+
+    if (enrollmentForm) {
+        const fields = {
+            parentName: {
+                el: document.getElementById('parentName'),
+                errorEl: document.getElementById('parentNameError'),
+                validate: (val) => {
+                    if (!val.trim()) return 'Please enter parent\'s name';
+                    if (val.trim().length < 2) return 'Name must be at least 2 characters';
+                    return '';
+                }
+            },
+            studentName: {
+                el: document.getElementById('studentName'),
+                errorEl: document.getElementById('studentNameError'),
+                validate: (val) => {
+                    if (!val.trim()) return 'Please enter student\'s name';
+                    if (val.trim().length < 2) return 'Name must be at least 2 characters';
+                    return '';
+                }
+            },
+            studentBoard: {
+                el: document.getElementById('studentBoard'),
+                errorEl: document.getElementById('studentBoardError'),
+                validate: (val) => {
+                    if (!val) return 'Please select a board';
+                    return '';
+                }
+            },
+            studentStd: {
+                el: document.getElementById('studentStd'),
+                errorEl: document.getElementById('studentStdError'),
+                validate: (val) => {
+                    if (!val) return 'Please select a standard';
+                    return '';
+                }
+            },
+            mobileNumber: {
+                el: document.getElementById('mobileNumber'),
+                errorEl: document.getElementById('mobileNumberError'),
+                wrapper: document.querySelector('.phone-input-wrapper'),
+                validate: (val) => {
+                    if (!val.trim()) return 'Please enter mobile number';
+                    if (!/^[0-9]{10}$/.test(val.trim())) return 'Please enter a valid 10-digit number';
+                    return '';
+                }
+            }
+        };
+
+        // Real-time validation on blur
+        Object.keys(fields).forEach(key => {
+            const field = fields[key];
+            const inputEl = field.el;
+            inputEl.addEventListener('blur', () => validateField(key));
+            inputEl.addEventListener('input', () => {
+                // Clear error on input
+                const targetEl = key === 'mobileNumber' ? field.wrapper : inputEl;
+                if (targetEl) {
+                    targetEl.classList.remove('input-error');
+                }
+                inputEl.classList.remove('input-error');
+                field.errorEl.textContent = '';
+            });
+        });
+
+        // Only allow digits in mobile field
+        fields.mobileNumber.el.addEventListener('input', (e) => {
+            e.target.value = e.target.value.replace(/[^0-9]/g, '');
+        });
+
+        function validateField(key) {
+            const field = fields[key];
+            const error = field.validate(field.el.value);
+            const targetEl = key === 'mobileNumber' ? field.wrapper : field.el;
+
+            if (error) {
+                field.errorEl.textContent = error;
+                if (targetEl) targetEl.classList.add('input-error');
+                field.el.classList.add('input-error');
+                if (targetEl) targetEl.classList.remove('input-success');
+                field.el.classList.remove('input-success');
+                return false;
+            } else {
+                field.errorEl.textContent = '';
+                if (targetEl) targetEl.classList.remove('input-error');
+                field.el.classList.remove('input-error');
+                if (targetEl) targetEl.classList.add('input-success');
+                field.el.classList.add('input-success');
+                return true;
+            }
+        }
+
+        function validateAll() {
+            let isValid = true;
+            Object.keys(fields).forEach(key => {
+                if (!validateField(key)) isValid = false;
+            });
+            return isValid;
+        }
+
+        enrollmentForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            if (!validateAll()) {
+                // Scroll to first error
+                const firstError = enrollmentForm.querySelector('.input-error');
+                if (firstError) {
+                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    firstError.focus();
+                }
+                return;
+            }
+
+            // Collect data
+            const enrollmentData = {
+                parentName: fields.parentName.el.value.trim(),
+                studentName: fields.studentName.el.value.trim(),
+                board: fields.studentBoard.el.value,
+                standard: fields.studentStd.el.value,
+                mobile: '+91' + fields.mobileNumber.el.value.trim(),
+                enrolledAt: new Date().toISOString()
+            };
+
+            // Save to localStorage
+            const enrollments = JSON.parse(localStorage.getItem('brainupkids_enrollments') || '[]');
+            enrollments.push(enrollmentData);
+            localStorage.setItem('brainupkids_enrollments', JSON.stringify(enrollments));
+
+            // Show loading state
+            enrollSubmitBtn.classList.add('loading');
+            enrollSubmitBtn.querySelector('span').textContent = '⏳ Redirecting to payment...';
+
+            // Redirect to Razorpay after brief delay
+            setTimeout(() => {
+                window.open(RAZORPAY_URL, '_blank');
+                // Reset button after redirect
+                setTimeout(() => {
+                    enrollSubmitBtn.classList.remove('loading');
+                    enrollSubmitBtn.querySelector('span').textContent = '🚀 Enroll & Pay ₹499';
+                }, 2000);
+            }, 800);
+        });
+    }
+
     console.log('🧠 BrainUp Kids — Ready to make learning fun!');
 });

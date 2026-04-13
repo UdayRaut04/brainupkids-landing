@@ -1444,26 +1444,38 @@ ul {
     border-radius: var(--radius-full);
 }
 
-/* === Pricing Section === */
-.pricing-section {
+/* === Enrollment Section === */
+.enrollment-section {
     padding: var(--section-padding);
     background: linear-gradient(180deg, #F8F7FF 0%, #FFF5F5 100%);
 }
 
-.pricing-card {
-    max-width: 520px;
+.enrollment-card {
+    max-width: 780px;
     margin: 0 auto;
     background: white;
     border-radius: var(--radius-xl);
-    padding: 50px 40px;
-    text-align: center;
+    padding: 50px 40px 40px;
     position: relative;
     box-shadow: var(--shadow-xl);
     border: 2px solid var(--primary);
     overflow: hidden;
 }
 
-.pricing-badge {
+/* Form Row (horizontal pairs) */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group-btn {
+    display: flex;
+    align-items: flex-end;
+    padding-top: 24px;
+}
+
+.enrollment-badge {
     background: var(--bg-gradient-warm);
     color: white;
     padding: 8px 24px;
@@ -1476,17 +1488,20 @@ ul {
     border-radius: 0 0 var(--radius-md) var(--radius-md);
 }
 
-.pricing-amount {
-    margin: 40px 0 32px;
+.enrollment-price-strip {
+    text-align: center;
+    margin-bottom: 32px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid rgba(108, 99, 255, 0.1);
 }
 
-.price-strike {
+.enrollment-price-strip .price-strike {
     font-size: 1.2rem;
     color: var(--text-light);
     text-decoration: line-through;
 }
 
-.price-main {
+.enrollment-price-strip .price-main {
     display: flex;
     align-items: baseline;
     justify-content: center;
@@ -1494,16 +1509,16 @@ ul {
     margin: 8px 0;
 }
 
-.price-currency {
+.enrollment-price-strip .price-currency {
     font-family: 'Fredoka', sans-serif;
     font-size: 2rem;
     font-weight: 700;
     color: var(--primary);
 }
 
-.price-value {
+.enrollment-price-strip .price-value {
     font-family: 'Fredoka', sans-serif;
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 700;
     background: var(--bg-gradient);
     -webkit-background-clip: text;
@@ -1512,13 +1527,13 @@ ul {
     line-height: 1;
 }
 
-.price-duration {
+.enrollment-price-strip .price-duration {
     font-size: 1.1rem;
     color: var(--text-secondary);
     font-weight: 600;
 }
 
-.price-save {
+.enrollment-price-strip .price-save {
     display: inline-block;
     background: rgba(78, 205, 196, 0.1);
     color: var(--accent-green);
@@ -1528,26 +1543,235 @@ ul {
     font-size: 0.85rem;
 }
 
-.pricing-features {
-    text-align: left;
-    margin: 32px 0;
+/* Form Styles */
+.enrollment-form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 20px;
 }
 
-.pricing-features li {
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.label-icon {
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid rgba(108, 99, 255, 0.12);
+    border-radius: var(--radius-md);
+    font-family: 'Nunito', sans-serif;
     font-size: 1rem;
     color: var(--text-primary);
+    background: rgba(108, 99, 255, 0.02);
+    transition: var(--transition-medium);
+    outline: none;
+}
+
+.form-group input::placeholder {
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--primary);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(108, 99, 255, 0.1);
+}
+
+.form-group input.input-error,
+.form-group select.input-error {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.1);
+}
+
+.form-group input.input-success,
+.form-group select.input-success {
+    border-color: var(--accent-green);
+    box-shadow: 0 0 0 4px rgba(78, 205, 196, 0.1);
+}
+
+.form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%236C63FF' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+}
+
+.phone-input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 2px solid rgba(108, 99, 255, 0.12);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: rgba(108, 99, 255, 0.02);
+    transition: var(--transition-medium);
+}
+
+.phone-input-wrapper:focus-within {
+    border-color: var(--primary);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(108, 99, 255, 0.1);
+}
+
+.phone-input-wrapper.input-error {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.1);
+}
+
+.phone-input-wrapper.input-success {
+    border-color: var(--accent-green);
+    box-shadow: 0 0 0 4px rgba(78, 205, 196, 0.1);
+}
+
+.phone-prefix {
+    padding: 14px 14px 14px 18px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--primary);
+    background: rgba(108, 99, 255, 0.06);
+    border-right: 2px solid rgba(108, 99, 255, 0.1);
+    flex-shrink: 0;
+    user-select: none;
+}
+
+.phone-input-wrapper input {
+    border: none;
+    background: transparent;
+    padding: 14px 18px;
+    font-size: 1rem;
+    flex: 1;
+    width: 100%;
+    outline: none;
+    font-family: 'Nunito', sans-serif;
+    color: var(--text-primary);
+}
+
+.phone-input-wrapper input::placeholder {
+    color: var(--text-light);
+}
+
+.phone-input-wrapper input:focus {
+    box-shadow: none;
+}
+
+.form-error {
+    font-size: 0.8rem;
+    color: var(--secondary);
+    font-weight: 600;
+    min-height: 18px;
+    transition: var(--transition-fast);
+}
+
+.enroll-submit-btn {
+    width: 100%;
+    margin-top: 8px;
+    font-size: 1.15rem;
+    padding: 18px 32px;
+}
+
+.enroll-submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(108, 99, 255, 0.4);
+}
+
+.enroll-submit-btn:active {
+    transform: translateY(-1px);
+}
+
+.enroll-submit-btn.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Enrollment Features Card */
+.enrollment-features-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: 40px 32px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(108, 99, 255, 0.08);
+    position: sticky;
+    top: 100px;
+}
+
+.enrollment-features-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid rgba(108, 99, 255, 0.08);
+}
+
+.enrollment-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.enrollment-features-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
     font-weight: 500;
-    padding: 4px 0;
+    color: var(--text-primary);
+}
+
+.ef-check {
+    flex-shrink: 0;
+    font-size: 1rem;
+}
+
+.enrollment-trust-badges {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    border-top: 1px solid rgba(108, 99, 255, 0.08);
+}
+
+.trust-badge-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(108, 99, 255, 0.06);
+    padding: 8px 14px;
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
 }
 
 .pricing-guarantee {
-    margin-top: 20px;
+    margin-top: 16px;
     font-size: 0.85rem;
     color: var(--text-light);
     font-weight: 500;
+    text-align: center;
 }
 
 /* === Play + Learn CTA === */
@@ -1757,12 +1981,14 @@ ul {
     background: rgba(108, 99, 255, 0.15);
     border-radius: 50%;
     font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
     transition: var(--transition-medium);
 }
 
 .social-link:hover {
     background: var(--primary);
     transform: translateY(-3px);
+    color: white;
 }
 
 .footer-links-group h4,
@@ -2043,6 +2269,14 @@ ul {
 
     .pricing-card {
         padding: 40px 24px;
+    }
+
+    .enrollment-card {
+        padding: 40px 20px 30px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
     }
 
     .price-value {

@@ -43,6 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // === Navbar Scroll Effect ===
     const navbar = document.getElementById('navbar');
     const backToTop = document.getElementById('backToTop');
+    const fixedEnrollBtn = document.getElementById('fixedEnrollBtn');
+    const enrollSection = document.getElementById('enroll');
 
     window.addEventListener('scroll', () => {
         const scrollY = window.scrollY;
@@ -59,6 +61,18 @@ document.addEventListener('DOMContentLoaded', () => {
             backToTop.classList.add('visible');
         } else {
             backToTop.classList.remove('visible');
+        }
+
+        // Fixed Enroll button — show after hero, hide near enroll section
+        if (fixedEnrollBtn && enrollSection) {
+            const enrollTop = enrollSection.offsetTop;
+            const enrollBottom = enrollTop + enrollSection.offsetHeight;
+            const isNearEnroll = scrollY + window.innerHeight > enrollTop && scrollY < enrollBottom;
+            if (scrollY > 300 && !isNearEnroll) {
+                fixedEnrollBtn.classList.add('visible');
+            } else {
+                fixedEnrollBtn.classList.remove('visible');
+            }
         }
     });
 

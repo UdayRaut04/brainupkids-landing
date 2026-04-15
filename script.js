@@ -333,22 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     return '';
                 }
             },
-            studentBoard: {
-                el: document.getElementById('studentBoard'),
-                errorEl: document.getElementById('studentBoardError'),
-                validate: (val) => {
-                    if (!val) return 'Please select a board';
-                    return '';
-                }
-            },
-            studentStd: {
-                el: document.getElementById('studentStd'),
-                errorEl: document.getElementById('studentStdError'),
-                validate: (val) => {
-                    if (!val) return 'Please select a standard';
-                    return '';
-                }
-            },
+
             mobileNumber: {
                 el: document.getElementById('mobileNumber'),
                 errorEl: document.getElementById('mobileNumberError'),
@@ -429,8 +414,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const enrollmentData = {
                 parentName: fields.parentName.el.value.trim(),
                 studentName: fields.studentName.el.value.trim(),
-                board: fields.studentBoard.el.value,
-                standard: fields.studentStd.el.value,
+
                 mobile: '+91' + fields.mobileNumber.el.value.trim(),
                 enrolledAt: new Date().toISOString()
             };

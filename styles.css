@@ -1937,7 +1937,7 @@ ul {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    grid-template-columns: 1.5fr 1fr 1fr;
     gap: 40px;
     padding: 60px 0 40px;
 }
@@ -2016,20 +2016,52 @@ ul {
     padding-left: 4px;
 }
 
-.contact-items {
+/* === Scrolling Courses Marquee === */
+.courses-marquee {
+    margin-top: 10px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.15) 0%, rgba(167, 139, 250, 0.15) 50%, rgba(244, 114, 182, 0.15) 100%);
+    border: 1px solid rgba(108, 99, 255, 0.2);
+    position: relative;
+}
+
+.marquee-link {
+    display: block;
+    text-decoration: none;
+    padding: 14px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.marquee-link:hover {
+    background: rgba(108, 99, 255, 0.08);
+}
+
+.marquee-track {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    width: max-content;
+    animation: marquee-scroll 25s linear infinite;
 }
 
-.contact-item {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.9rem;
-    transition: var(--transition-fast);
+.marquee-link:hover .marquee-track {
+    animation-play-state: paused;
 }
 
-.contact-item:hover {
-    color: white;
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0 8px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+    letter-spacing: 0.3px;
+}
+
+@keyframes marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 .footer-bottom {

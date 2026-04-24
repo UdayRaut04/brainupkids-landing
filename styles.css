@@ -99,7 +99,7 @@ ul {
 .container {
     max-width: var(--container-max);
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 clamp(16px, 4vw, 24px);
 }
 
 /* === Particles Background === */
@@ -438,7 +438,7 @@ ul {
 .hero-container {
     max-width: var(--container-max);
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 clamp(14px, 4vw, 24px);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
@@ -1446,7 +1446,7 @@ ul {
 
 /* === Enrollment Section === */
 .enrollment-section {
-    padding: var(--section-padding);
+    padding: 50px 0;
     background: linear-gradient(180deg, #F8F7FF 0%, #FFF5F5 100%);
 }
 
@@ -1455,7 +1455,7 @@ ul {
     margin: 0 auto;
     background: white;
     border-radius: var(--radius-xl);
-    padding: 50px 40px 40px;
+    padding: 40px 36px 32px;
     position: relative;
     box-shadow: var(--shadow-xl);
     border: 2px solid var(--primary);
@@ -1490,8 +1490,8 @@ ul {
 
 .enrollment-price-strip {
     text-align: center;
-    margin-bottom: 32px;
-    padding-bottom: 28px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
     border-bottom: 1px solid rgba(108, 99, 255, 0.1);
 }
 
@@ -1518,7 +1518,7 @@ ul {
 
 .enrollment-price-strip .price-value {
     font-family: 'Fredoka', sans-serif;
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     font-weight: 700;
     background: var(--bg-gradient);
     -webkit-background-clip: text;
@@ -1547,7 +1547,7 @@ ul {
 .enrollment-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 14px;
 }
 
 .form-group {
@@ -1573,11 +1573,11 @@ ul {
 .form-group input,
 .form-group select {
     width: 100%;
-    padding: 14px 18px;
+    padding: 12px 16px;
     border: 2px solid rgba(108, 99, 255, 0.12);
     border-radius: var(--radius-md);
     font-family: 'Nunito', sans-serif;
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--text-primary);
     background: rgba(108, 99, 255, 0.02);
     transition: var(--transition-medium);
@@ -1685,9 +1685,9 @@ ul {
 
 .enroll-submit-btn {
     width: 100%;
-    margin-top: 8px;
-    font-size: 1.15rem;
-    padding: 18px 32px;
+    margin-top: 4px;
+    font-size: 1.1rem;
+    padding: 14px 28px;
 }
 
 .enroll-submit-btn:hover {
@@ -1767,7 +1767,7 @@ ul {
 }
 
 .pricing-guarantee {
-    margin-top: 16px;
+    margin-top: 10px;
     font-size: 0.85rem;
     color: var(--text-light);
     font-weight: 500;
@@ -2156,6 +2156,182 @@ ul {
     100% { opacity: 0; transform: translateY(120px) rotate(720deg) scale(0.3); }
 }
 
+/* === Problem Section === */
+.problem-section {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #FFF5F5 0%, #FFEBEE 50%, #FFF5F5 100%);
+}
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 800px;
+    margin: 0 auto 32px;
+}
+
+.problem-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 24px 28px;
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(255, 107, 107, 0.12);
+    transition: var(--transition-medium);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.problem-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.problem-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.problem-stat {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    padding: 20px 28px;
+    background: rgba(255, 107, 107, 0.06);
+    border-radius: var(--radius-lg);
+    max-width: 500px;
+    margin: 0 auto;
+    border-left: 4px solid var(--secondary);
+}
+
+/* === Benefits Section === */
+.benefits-section {
+    padding: var(--section-padding);
+    background: linear-gradient(180deg, #F0FFF4 0%, #E8F5E9 50%, #F0FFF4 100%);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.benefit-item {
+    text-align: center;
+    padding: 36px 24px;
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(78, 205, 196, 0.12);
+    transition: var(--transition-medium);
+}
+
+.benefit-item:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.benefit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    font-size: 2rem;
+    background: rgba(78, 205, 196, 0.1);
+    border-radius: 50%;
+}
+
+.benefit-item h4 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.benefit-item p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* === Bonus Section === */
+.bonus-section {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #FFFDE7 0%, #FFF9C4 50%, #FFFDE7 100%);
+}
+
+.bonus-card {
+    text-align: center;
+    padding: 60px 40px;
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    border: 2px dashed var(--accent-yellow);
+}
+
+.bonus-card h2 {
+    font-size: 2.2rem;
+    color: var(--text-primary);
+    margin-bottom: 32px;
+}
+
+.bonus-grid {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.bonus-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 28px;
+    background: rgba(255, 217, 61, 0.1);
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 217, 61, 0.3);
+    transition: var(--transition-medium);
+}
+
+.bonus-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-sm);
+}
+
+.bonus-icon {
+    font-size: 1.4rem;
+}
+
+/* === WhatsApp CTA Button === */
+.btn-whatsapp {
+    background: #25D366;
+    color: white;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+    background: #1fb855;
+}
+
+/* === CTA Button Group === */
+.cta-btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
 /* === Responsive Design === */
 @media (max-width: 1024px) {
     .hero-container {
@@ -2232,11 +2408,28 @@ ul {
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .problem-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
 }
 
 @media (max-width: 768px) {
     :root {
-        --section-padding: 70px 0;
+        --section-padding: 60px 0;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .hero-container {
+        padding: 0 16px;
     }
 
     .nav-links {
@@ -2276,15 +2469,15 @@ ul {
     }
 
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .step-card {
@@ -2296,7 +2489,11 @@ ul {
     }
 
     .play-learn-card h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+    }
+
+    .play-learn-card {
+        padding: 40px 20px;
     }
 
     .pricing-card {
@@ -2304,7 +2501,7 @@ ul {
     }
 
     .enrollment-card {
-        padding: 40px 20px 30px;
+        padding: 40px 16px 30px;
     }
 
     .form-row {
@@ -2338,15 +2535,75 @@ ul {
         align-items: center;
         gap: 16px;
     }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .benefit-item {
+        padding: 24px 16px;
+    }
+
+    .problem-section {
+        padding: 60px 0;
+    }
+
+    .problem-item {
+        padding: 18px 20px;
+        font-size: 1rem;
+    }
+
+    .bonus-card {
+        padding: 40px 20px;
+    }
+
+    .bonus-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .bonus-grid {
+        gap: 16px;
+    }
+
+    .bonus-item {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+
+    .cta-btn-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .final-test-card {
+        padding: 30px 20px;
+    }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 14px;
+    }
+
+    .hero-container {
+        padding: 0 14px;
+    }
+
     .hero-title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
     }
 
     .section-title {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     .hero-cta-group {
@@ -2354,17 +2611,26 @@ ul {
         align-items: center;
     }
 
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+
     .stats-grid {
         grid-template-columns: 1fr 1fr;
-        gap: 16px;
+        gap: 12px;
     }
 
     .stat-item {
-        padding: 20px 12px;
+        padding: 18px 10px;
     }
 
     .stat-number {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
     }
 
     .video-features {
@@ -2373,6 +2639,40 @@ ul {
 
     .float-item {
         display: none;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .problem-stat {
+        font-size: 1rem;
+        padding: 16px 20px;
+    }
+
+    .step-card {
+        margin-bottom: 48px;
+    }
+
+    .enrollment-card {
+        padding: 36px 12px 24px;
+    }
+
+    .section-tag {
+        font-size: 0.8rem;
+        padding: 6px 14px;
+    }
+
+    .nav-container {
+        padding: 0 14px;
+    }
+
+    .testimonial-card {
+        padding: 28px 20px;
+    }
+
+    .level-card {
+        padding: 28px 20px;
     }
 }
 
